@@ -1,7 +1,7 @@
 ## Docker challenge with `Golang`
 
 ```bash
-docker run -it --rm thiagokpelo/fullcycle-docker-go
+docker run thiagokpelo/codeeducation
 ```
 
-[Docker Hub - FullCycle Docker Go Image](https://hub.docker.com/repository/docker/thiagokpelo/fullcycle-docker-go)
+[Docker Hub - Code Education Image](https://hub.docker.com/repository/docker/thiagokpelo/codeeducation)

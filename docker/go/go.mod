@@ -1,3 +1,3 @@
-module thiagokpelo.dev/codeeducationrocks
+module thiagokpelo.dev/codeeducation
 
 go 1.16
