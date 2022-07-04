@@ -3,6 +3,8 @@ on:
   pull_request:
     branches:
       - main # or the name of your main branch
+    paths:
+      - "ci/go/"
 
 jobs:
   build:
@@ -18,6 +20,9 @@ jobs:
           SONAR_HOST_URL: https://sonarcloud.io
           GITHUB_TOKEN: $GITHUB_TOKEN
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dproject.settings=ci/go/sonar-project.properties
 
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.
