@@ -5,4 +5,4 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=go-ci-challenge&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=go-ci-challenge)
 
 ---
-Develop by [Thiago Kpelo](https://thiagokpelo.dev)
+Develop by [@kpelin](https://thiagokpelo.dev)
