@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// main is the entry point for the application.
 func main() {
 	fmt.Println(sum(1, 2))
 }
