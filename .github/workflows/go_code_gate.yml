@@ -19,11 +19,8 @@ jobs:
         with:
           go-version: '1.18'
 
-      - name: Go to project
-        run: cd ci/go
-
       - name: Run tests with coverage
-        run: go test -coverageprofile=coverage.out
+        run: cd ci/go && go test -coverageprofile=coverage.out
 
       - name: Sonar Cloud Scan
         uses: sonarsource/sonarqube-scan-action@master

@@ -19,14 +19,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: Go to project
-        run: cd ci/node
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests with coverage
-        run: npm test
+      - name: Install dependencies and run tests
+        run: cd ci/node && npm install && npm test
 
       - name: Sonar Cloud Scan
         uses: sonarsource/sonarqube-scan-action@master
