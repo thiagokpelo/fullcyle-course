@@ -4,7 +4,7 @@ on:
     branches:
       - main # or the name of your main branch
     paths:
-      - "ci/go/"
+      - "ci/go/**"
 
 jobs:
   build:
