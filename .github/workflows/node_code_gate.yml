@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 16
 
+      - name: Go to project
+        run: cd ci/node
+
       - name: Install dependencies
         run: npm install
 
