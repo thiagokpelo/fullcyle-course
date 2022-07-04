@@ -1,0 +1,32 @@
+name: "Golang - Code Gate"
+on:
+  pull_request:
+    branches:
+      - main # or the name of your main branch
+    paths:
+      - "ci/go/**"
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Setup Golang
+        uses: actions/setup-go@v2
+        with: 1.18
+
+      - name: Run tests with coverage
+        run: go test -coverageprofile=coverage.out
+
+      - name: Sonar Cloud Scan
+        uses: sonarsource/sonarqube-scan-action@master
+        env:
+          SONAR_HOST_URL: https://sonarcloud.io
+          GITHUB_TOKEN: $GITHUB_TOKEN
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dproject.settings=ci/go/sonar-project.properties
