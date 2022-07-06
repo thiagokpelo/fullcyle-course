@@ -7,7 +7,7 @@ on:
       - "ci/go/**"
 
 jobs:
-  build:
+  code_gate:
     name: Test
     runs-on: ubuntu-latest
     steps:
